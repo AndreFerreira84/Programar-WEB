@@ -1,0 +1,245 @@
+main {
+  margin-bottom: 20px;
+}
+
+.Banner {
+  width: 100%;
+  height:250px;
+  display: block;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  z-index: 2;
+  filter: drop-shadow(0 0 2px rgb(0, 0, 0));
+  /*background-color:  rgba(255, 255, 255, 0.384)*/
+}
+
+.BannerFundo {
+  background-image: url("/Imagens/Logos/fundoBinario.jpeg");
+  z-index: 1;
+}
+
+.TabGeralV {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.TabGeralV .TituloV {
+  font-size: 100px;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+.TabGeralV .ProdutosV {
+  border-collapse: separate;
+  border-spacing: 60px 0px;
+  margin: 0 auto;
+  color: black;
+  font-size: 30px;
+  max-width: 300px;
+}
+.TabGeralV .astV{
+  color:red;
+  display: inline-block;
+}
+
+.ContainerProdutosV{
+  display: flex;
+}
+.ContainerProdutosV .ProdutosV{
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ContainerProdutosV .ProdutosV img{
+  width: 200px;
+  user-select: none;
+}
+.ContainerProdutosV .ProdutosV .NomeProdV{
+  text-align: center;
+  font-weight: bold;
+}
+.ContainerProdutosV .ProdutosV .DescProdV {
+  display: flex;
+  justify-content: center; /* Alinha horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  word-wrap: break-word;
+  /*text-align: center;*/
+  font-size: 20px;
+  color: black;
+  height: 230px;
+}
+
+.ContainerProdutosV .ProdutosV .PrecoProdV{
+  text-align: center;
+  font-size: 25px;
+  color: rgb(255, 0, 0);
+}
+
+.TabGeralV .ProdutosV .BotaoCompra {
+  font-size: 20px;
+  border: 0;
+  margin-top: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 30px;
+  border-radius: 100px;
+  background-image: linear-gradient(
+    90deg,
+    rgb(184, 35, 27),
+    rgb(229, 83, 58),
+    rgb(242, 175, 104)
+  );
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.TabGeralV .ProdutosV .BotaoCompra:hover {
+  cursor: pointer;
+  background-image: linear-gradient(
+    90deg,
+    rgba(184, 35, 27,0.8),
+    rgba(229, 83, 58,0.8),
+    rgba(242, 175, 104,0.8)
+  );
+  transform: scale(1.1);
+}
+
+.TabGeralV .ProdutosV .BotaoFav{
+  height:40px;
+  width:40px;
+  border-radius:50%;
+  font-size:20px;
+  color:rgb(0, 0, 0);
+  border:0px;
+  background-color: transparent;
+}
+
+.BotaoFav .fa-solid.fa-heart {
+  transition: transform 0.3s ease;
+}
+
+/*.BotaoFav:hover .fa-solid.fa-heart {
+  transform: scale(1.5);
+  color:rgb(0, 195, 255);
+}*/
+
+
+.TabGeralV .button {
+  --width: 200px;
+  --height: 70px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color:linear-gradient(
+    90deg,
+    rgba(184, 35, 27),
+    rgba(229, 83, 58),
+    rgba(242, 175, 104)
+  );
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: all 0.3s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+}
+
+.TabGeralV .text {
+  top:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.TabGeralV .button-wrapper,.TabGeralV .text,.TabGeralV .icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+/*.TabGeralV .button-wrapper .fa-solid.fa-eye{
+  padding-left: 5px;
+}*/
+
+.TabGeralV .icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.TabGeralV .text,.TabGeralV .icon {
+  transition: top 0.5s;
+}
+
+.TabGeralV .button:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(242, 175, 104,0.8),
+    rgba(229, 83, 58,0.8),
+    rgba(184, 35, 27,0.8)
+  );
+}
+
+.TabGeralV .button:hover .text {
+  top: -100%;
+}
+
+.TabGeralV .button:hover .icon {
+  top: 0;
+}
+
+.TabGeralV .button:hover:before,.TabGeralV .button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.TabGeralV .button:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.TabGeralV .button:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+.TabGeralV .MaisInfoEmpresa {
+  /*padding-top: 100px;
+  padding-bottom: 100px;*/
+  padding: 50px;
+  border-spacing: 0px;
+}
+
+.TabGeralV .MaisInfoEmpresa img {
+  width: 250px;
+}
+
+.TabGeralV .MaisInfoEmpresa .NomeEmpresa {
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.TabGeralV .MaisInfoEmpresa .DescrEmpresa {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  padding-bottom: 60px;
+}

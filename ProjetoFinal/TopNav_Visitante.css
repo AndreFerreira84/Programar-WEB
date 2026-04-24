@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*border: 1px solid rgb(255, 0, 0);*/
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.TopNav ul {
+    padding-left: 30px;
+}
+
+.TopNav li,
+a,
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.TopNav .logo {
+  opacity: 0;
+    width: 250px;
+    margin: auto;
+}
+
+.TopNav .Nav_Link {
+    list-style: none;
+}
+
+.TopNav .Nav_Link li {
+    display: inline-block;
+}
+
+.TopNav .Nav_Link li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.TopNav .Nav_Link li a {
+    color: white;
+    background: black;
+    width: 150px;
+}
+
+.TopNav .Nav_Link li .fa-solid .fa-arrow-down:hover,
+.TopNav .Nav_Link li a:hover {
+    background-image: linear-gradient(
+      90deg,
+      rgb(184, 35, 27),
+      rgb(229, 83, 58),
+      rgb(242, 175, 104)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.3s ease;
+}
+
+.TopNav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.TopNav .dropdown-content {
+    margin-left: -25px;
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    z-index: 1;
+    text-align: center;
+}
+
+.TopNav .dropdown-content a {
+    color: black;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.TopNav .dropdown-content a:not(:last-child){
+  border-bottom: 1px solid white;
+}
+
+.TopNav .hardware-dropdown-content a i.fa-solid.fa-bolt,
+.TopNav .hardware-dropdown-content a i.fa-brands.fa-redhat,
+.TopNav .hardware-dropdown-content a i.fa-solid.fa-fish,
+.TopNav .dropdown-content a i.fa-brands.fa-usb,
+.TopNav .dropdown-content a i.fa-solid.fa-microchip,
+.TopNav .dropdown-content a i.fa-solid.fa-eye {
+    padding-left: 10px;
+}
+
+.TopNav .dropdown:hover .dropdown-content {
+    padding-top: 20px;
+    display: block;
+}
+
+.TopNav .hardware-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.TopNav .hardware-dropdown-content {
+  left: 150px; /* Ajuste a posição horizontal aqui conforme necessário */
+  top: 24px;
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  z-index: 1;
+  text-align: center;
+}
+
+.TopNav .hardware-dropdown-content a {
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  border-left: 1px solid white;
+}
+
+/*inicio*/
+.TopNav .Software-Dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.TopNav .Software-Dropdown-Content {
+  left: 150px;
+  top: 24px;
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  z-index: 1;
+  text-align: center;
+}
+
+.TopNav .Software-Dropdown-Content a {
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  border-left: 1px solid white;
+}
+
+.TopNav .Software-Dropdown:hover .Software-Dropdown-Content {
+  display: block;
+}
+/*fim*/
+
+.TopNav .hardware-dropdown:hover .hardware-dropdown-content {
+  display: block;
+}
+
+.TopNav .ShopIcon .Cart {
+    margin-left: 5px;
+}
+
+.TopNav .ShopIcon {
+    height: 70px;
+    padding: 20px 10px;
+    background: transparent;
+    background-color: red;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.TopNav .ShopIcon:hover {
+    color: rgb(255, 255, 255);
+}
+/**/
+.TopNav .FavIcon .Heart {
+  margin-left: 5px;
+}
+
+.TopNav .FavIcon {
+  height: 70px;
+  padding: 20px 10px;
+  background: transparent;
+  background-color: red;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.TopNav .FavIcon:hover {
+  color: rgb(255, 255, 255);
+}
+/**/
+.TopNav .UserIcon {
+    padding: 15px 10px;
+    background: transparent;
+    color: white;
+    border: 0;
+}
+
+.TopNav .UserIcon .User {
+    margin-left: 5px;
+}
+
+.TopNav .UserIcon:hover {
+    cursor: pointer;
+    background-color: red;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+}
+
+/*@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .TopNav ul {
+    padding-left: 30px;
+  }
+  
+  .TopNav li,
+  a,
+  button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .TopNav .logo {
+    width: 150px;
+    margin: auto;
+  }
+  
+  .TopNav .Nav_Link {
+    list-style: none;
+  }
+  
+  .TopNav .Nav_Link li {
+    display: inline-block;
+  }
+  
+  .TopNav .Nav_Link li:not(:last-child) {
+    margin-right: 15px;
+  }
+  
+  .TopNav .Nav_Link li a {
+    color: white;
+    background: black;
+    width: 150px;
+  }
+  
+  .TopNav .Nav_Link li .fa-solid .fa-arrow-down:hover,
+  .TopNav .Nav_Link li a:hover {
+    background-image: linear-gradient(
+      90deg,
+      rgb(184, 35, 27),
+      rgb(229, 83, 58),
+      rgb(242, 175, 104)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.3s ease;
+  }
+  
+  .TopNav .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .TopNav .dropdown-content {
+    margin-left: -25px;
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    z-index: 1;
+    text-align: center;
+  }
+  
+  .TopNav .dropdown-content a {
+    color: black;
+    padding: 12px 10px; /*caixa com ware
+    text-decoration: none;
+    display: block;
+  }
+  
+  .TopNav .dropdown-content a i.fa-brands.fa-usb,
+  .TopNav .dropdown-content a i.fa-solid.fa-microchip {
+    padding-left: 10px;
+  }
+  
+  .TopNav .dropdown:hover .dropdown-content {
+    padding-top: 20px;
+    display: block;
+  }
+  
+  .TopNav .ShopIcon .Cart {
+    margin-left: 5px;
+  }
+  
+  .TopNav .ShopIcon {
+    height: 70px;
+    padding: 20px 10px;
+    background: transparent;
+    background-color: red;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .TopNav .ShopIcon:hover {
+    color: rgb(255, 255, 255);
+  }
+  
+  .TopNav .UserIcon {
+    padding: 15px 10px;
+    background: transparent;
+    color: white;
+    border: 0;
+  }
+  
+  .TopNav .UserIcon .User {
+    margin-left: 5px;
+  }
+  
+  .TopNav .UserIcon:hover {
+    cursor: pointer;
+    background-color: red;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+  }*/

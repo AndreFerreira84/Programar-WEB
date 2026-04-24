@@ -1,0 +1,125 @@
+footer {
+    width: 100%;
+    padding: 50px 15%;
+    background: #000000;
+    color: #efefef;
+    display: flex;
+    justify-content: center;
+}
+
+footer div {
+    text-align: center;
+}
+
+.col-2 {
+    /*margin-left:  5vw;*/
+    margin-right: 5vw;
+}
+
+footer div h3 {
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+footer .col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+footer form .FooterEmail {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+
+footer form button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+footer form label {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+    text-align: center;
+}
+
+footer .col-3 .Social-Icons {
+    margin-top: 30px;
+}
+
+footer .col-3 .Social-Icons i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+footer .col-3 .Social-Icons a,
+footer .col-3 .Social-Icons a:visited,
+footer .col-3 a,
+footer .col-3 a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 100vw; /* Ajustado para corresponder ao tamanho dos slides */
+    overflow: hidden; /* Esconder conteúdo que excede as dimensões do slider */
+    display: grid;
+    place-items: center;
+}
+
+.slide-track {
+    display: flex;
+    animation: scroll 10s linear infinite;
+    background-color: black;
+    width: calc(250px * 18);
+    padding-top: 50px;
+}
+
+.slide {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    padding: 10px;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 9));
+    }
+}
+
+a.TermosECondicoes,
+a.TermosECondicoes a:hover,
+a.TermosECondicoes a:active,
+a.TermosECondicoes a:visited{
+    color: white;
+    font-size: 15px;
+    text-decoration: underline;
+}

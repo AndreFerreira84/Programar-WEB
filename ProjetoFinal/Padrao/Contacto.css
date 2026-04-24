@@ -1,0 +1,87 @@
+.Container-Contactos{
+    width: 80%;
+    margin: 20px auto;
+    height: 70%;
+    margin-bottom: 150px;
+}
+.Container-Contactos .Caixa-Contactos{
+    background: #fff;
+    display: flex;
+}
+.Container-Contactos .Caixa-Contactos .Caixa-Esquerda{
+    flex-basis:60%;
+    padding: 40px 60px;
+}
+.Container-Contactos .Caixa-Contactos .Caixa-Direita{
+    flex-basis:40%;
+    padding: 40px;
+    background:#b50000;
+    color: #fff;
+}
+.Container-Contactos h1{
+    margin-bottom: 10px;
+}
+.Container-Contactos p{
+    margin-bottom: 40px;
+}
+.input-roww{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input-row .input-groupp{
+    flex-basis: 45%;
+}
+input{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid black;
+    outline: #ccc;
+    padding-bottom: 5px;
+}
+textarea{
+    width: 100%;
+    border: 1px solid black;
+    outline: none;
+    padding: 10px;
+    resize: none;
+    box-sizing: border-box;
+}
+.input-row label{
+    margin-bottom: 6px;
+    display: block;
+    color: #b50000;
+}
+form button{
+    background:#b50000;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+.Caixa-Esquerda h3{
+    color: #b50000;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.Caixa-Direita h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.Caixa-Direita tr td:first-child{
+    padding-right: 20px;
+    color: white;
+}
+.Caixa-Direita tr td{
+    padding-top: 20px;
+    color: white;
+}
+
+.Caixa-Direita tr td a,
+.Caixa-Direita tr td a:visited{
+    font-size: 15px;
+    color:white;
+}

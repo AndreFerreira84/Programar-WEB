@@ -1,0 +1,170 @@
+<html>
+  <head>
+     <link rel="stylesheet" href="/ProjetoFinal/TopNav_Visitante.css">
+<link rel="stylesheet" href="/ProjetoFinal/Padrao/Footer.css">
+<link rel="stylesheet" href="/ProjetoFinal/Produtos/RubberDucky.css">
+    <header class="TopNav">
+    <nav>
+      <ul class="Nav_Link">
+        <li>
+          <a href="/ProjetoFinal/index.html">Home <i class="fa-solid fa-house"></i></a>
+        </li>
+        <li class="dropdown">
+          <a>Produtos <i class="fa-sharp fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content">
+            <div class="hardware-dropdown">
+              <a href="">Hardware<i class="fa-brands fa-usb"></i></a>
+              <div class="hardware-dropdown-content">
+                  <a href="/ProjetoFinal/Produtos/RubberDucky.html">Rubber Ducky</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="/ProjetoFinal/Padrao/Contacto.html">Contactos <i class="fa-solid fa-phone fa-sm"></i></a></li>
+      </ul>
+    </nav>
+    <img class="logo" src="Imagens/Logos/Designer (1).png" alt="Logo" >
+    <a href="Padrao/PagDeError401.html" style="border-right:1px solid black" >
+      <!--<button class="FavIcon">
+      <i class="fa-solid fa-heart"><span class="Heart">0</span></i>
+      </button>-->
+    </a>
+    <a href="Padrao/PagDeError401.html">
+      <!--<button class="ShopIcon">
+        <i class="fa-solid fa-cart-shopping"><span class="Cart">0</span></i>
+      </button>-->
+    </a>
+    <a href="#" onclick="emDesenvolvimento(event)"><!-- Entrar na conta -->
+      <button class="UserIcon">
+        <i class="fa-solid fa-user"></i><span class="User">Login</span>
+      </button>
+    </a>
+    <a href="#" onclick="emDesenvolvimento(event)"><!-- Criar Conta -->
+      <button class="UserIcon">
+        <i class="fa-solid fa-user-pen"></i><span class="User">Registo</span>
+      </button>
+    </a>
+  </header>
+    <link rel="stylesheet" href="/ProjetoFinal/Produtos/RubberDucky.css">
+  </head>
+<script>
+  function incrementar(cod_produto, limiteEstoque) {
+    var contador = document.getElementById("contador");
+    var valorAtual = Number(contador.value);
+    if (valorAtual < limiteEstoque) {
+        contador.value = valorAtual + 1;
+    }
+}
+
+function decrementar(cod_produto, limiteEstoque) {
+    var contador = document.getElementById("contador");
+    var valorAtual = Number(contador.value);
+    if (valorAtual > 1) {
+        contador.value = valorAtual - 1;
+    }
+}
+</script>
+<body>
+<table class="ImgProduto_InfoProduto_RubberDucky">
+            <tr>
+                <td rowspan="6" colspan="3" >
+                    <img class="ImgProduto_RubberDucky" src="/ProjetoFinal/Imagens/Produtos/RubberDucky.png">
+                    <td rowspan="5" class="espaco_RubberDucky"></td>
+                </td>
+                <td class="NomeProduto_RubberDucky" colspan="3" >
+                  Rubber Ducky
+                </td>
+            </tr>
+            <tr>
+                <td class="DescricaoProduto_RubberDucky" colspan="3" style="text-align: justify;"  >
+                   Os computadores confiam nos humanos. Os humanos usam teclados. Daí a especificação universal HID (Human Interface Device)
+                  <br>
+                  Um teclado se apresenta como um HID, e por sua vex é inerentemente considerado humano pelo computadores
+                  <br>
+                  O dispositivo, que parece uma unidade flash inocente para os humanos e computadores, abusa dessa confiança para entregar
+                  cargas poderosas, injetando combinações de teclas maliciosas em velocidades sobre-humanas
+                </td>
+                <tr>
+                  <td class="Acessorios_RubberDucky" colspan="3"  >
+                    Acessorios:
+                  </td>
+                </tr>
+                <tr>
+                  <td class="Opcs_RubberDucky" >
+                    <img src="/ProjetoFinal/Imagens/Extras/RubberDucky/Curso_Online.png"><br>
+                    Curso Online<br>
+                    só por <i>50,00€/un</i>
+                    <br><span style="font-weight: bold;" >(brevemente)</span>
+                  </td>
+                  <td class="Opcs_RubberDucky" >
+                    <img src="/ProjetoFinal/Imagens/Extras/RubberDucky/Curso_Livro.png"><br>
+                    Curso em livro<br>
+                    só por <i>40,00€/un</i>
+                    <br><span style="font-weight: bold;" >(brevemente)</span>
+                  </td>
+                  <td class="Opcs_RubberDucky" >
+                    <img src="/ProjetoFinal/Imagens/Extras/RubberDucky/Capa.png"><br>
+                    Capas 3D<br>
+                    só por <i>15,00€/un</i>
+                    <br><span style="font-weight: bold;" >(brevemente)</span>
+                  </td>
+                </tr>              
+              </tr>
+              <tr>
+                <td colspan="3">
+                  <form method="post" action="/ProjetoFinal/Padrao/PagDeError401.html" style="text-align: center;" >
+                    
+                    <button type="button" style="border: 0;width: 25px;height: 25px;border-radius: 20px;line-height: 25px;background-color: rgb(180, 179, 179);" onclick="decrementar(0,10000000)">
+                        <i class="fa-solid fa-minus">-</i>
+                      </button>
+                      <input style="text-align: center;" type="number" min="1" max="10000000" step="1" id="contador" name="prod_quant" value="1" >
+                      <button type="button" style="border: 0;width: 25px;height: 25px;border-radius: 20px;line-height: 25px;background-color: rgb(180, 179, 179);" onclick="incrementar(0,10000000)">
+                        <i class="fa-solid fa-plus">+</i>
+                      </button>
+                      
+                      <input type="hidden" name="cod_produto" value="<?php echo $dadosRPI['codproduto'] ?>">
+                      <input type="submit" value="Adicionar ao carrinho" onclick="emDesenvolvimento(event)" class="BotaoCompra"></input>
+                    </form>
+                </td>
+              </tr>
+        </table>
+</body>
+    <footer>
+        <!--<div class="col-1">
+            <h3>Links Uteis</h3>
+            <a href="index.php?pagina=Contactos">Contactos <i class="fa-solid fa-phone"></i></a>
+        </div>-->
+        <div class="col-2">
+            <h3>NewsLetter</h3>
+            <form method="POST" action="" >
+                  <br>
+                  <label><input type="checkbox" name="TermosECondicoes" required value="">
+                  Li e aceitos os <a class="TermosECondicoes" href="index.php?pagina=TermosECondicoes">termos e condições</a>, bem como o tratamento dos dados pessoais.</label>
+                  <br>
+                  <button type="submit" name="Subscrever">
+                    Subscrever
+                  </button>
+            </form>
+        </div>
+        <div class="col-3">
+            <a href="index.php?pagina=Contactos"><h3>Contactos</h3></a>
+            <div class="Social-Icons">
+            <a href="/ProjetoFinal/Padrao/Contacto.html"><i class="fa-brands fa-discord"></i>Discord</a>
+              <br>
+              <a href="index.php?pagina=Contactos"><i class="fa-solid fa-envelope"></i>Gmail</a>
+              <br>
+            </div>
+        </div>
+    </footer>
+        <script>
+  function AvisoLogin(){
+    alert("Para prevenir contas falsas, faça o login.")
+  }
+</script>
+<script>
+function emDesenvolvimento(event) {
+  event.preventDefault(); // impede o link de navegar
+  alert("Em desenvolvimento");
+}
+</script>
+</html>

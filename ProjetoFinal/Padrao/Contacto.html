@@ -1,0 +1,140 @@
+<html>
+<link rel="stylesheet" href="/ProjetoFinal/TopNav_Visitante.css">
+<link rel="stylesheet" href="/ProjetoFinal/Padrao/Contacto.css">
+<link rel="stylesheet" href="/ProjetoFinal/Padrao/Footer.css">
+    <header class="TopNav">
+    <nav>
+      <ul class="Nav_Link">
+        <li>
+          <a href="/ProjetoFinal/index.html">Home <i class="fa-solid fa-house"></i></a>
+        </li>
+        <li class="dropdown">
+          <a>Produtos <i class="fa-sharp fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content">
+            <div class="hardware-dropdown">
+              <a href="">Hardware<i class="fa-brands fa-usb"></i></a>
+              <div class="hardware-dropdown-content">
+                  <a href="/ProjetoFinal/Produtos/RubberDucky.html">Rubber Ducky</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="/ProjetoFinal/Padrao/Contacto.html">Contactos <i class="fa-solid fa-phone fa-sm"></i></a></li>
+      </ul>
+    </nav>
+    <img class="logo" src="Imagens/Logos/Designer (1).png" alt="Logo" >
+    <a href="Padrao/PagDeError401.html" style="border-right:1px solid black" >
+      <!--<button class="FavIcon">
+      <i class="fa-solid fa-heart"><span class="Heart">0</span></i>
+      </button>-->
+    </a>
+    <a href="Padrao/PagDeError401.html">
+      <!--<button class="ShopIcon">
+        <i class="fa-solid fa-cart-shopping"><span class="Cart">0</span></i>
+      </button>-->
+    </a>
+    <a href="#" onclick="emDesenvolvimento(event)"><!-- Entrar na conta -->
+      <button class="UserIcon">
+        <i class="fa-solid fa-user"></i><span class="User">Login</span>
+      </button>
+    </a>
+    <a href="#" onclick="emDesenvolvimento(event)"><!-- Criar Conta -->
+      <button class="UserIcon">
+        <i class="fa-solid fa-user-pen"></i><span class="User">Registo</span>
+      </button>
+    </a>
+  </header>
+
+<body>
+
+<link rel="stylesheet" href="Padrao\Contacto.css"><!-- CSS do Contactos -->
+<div class="Container-Contactos">
+            <h1>Entre em contacto connosco</h1>
+            <p>Nós gostavamos de responder as suas duvidas. Sinta-se livre para nos perguntar o que quiser.</p>
+            <div class="Caixa-Contactos">
+                <div class="Caixa-Esquerda">
+                    <h3>Envie sua pergunta</h3>
+                    <form method="post" >
+                        <div class="input-roww">
+                            <div class="input-groupp">
+                                <label>Nome:</label><input type="text"  placeholder="Insira o nome">
+                            </div>
+<div class="input-groupp">
+  <label>Data:</label>
+  <input type="text" id="dataAtual" readonly style="border: none; outline: none;">
+</div>
+                           
+                         
+                        </div>
+                        <div class="input-roww">
+                           
+                            <div class="input-groupp">
+                                <label>Email:</label><input type="email" name="Email"  placeholder="Insira o email">
+                            </div>
+                           
+                            <div class="input-group">
+                                <label>Assunto:</label><input type="text" name="Assunto" autocomplete="off" placeholder="Insira o seu assunto" required>
+                            </div>
+                        </div>
+                        <label>Mensagem:</label><textarea rows="5" name="Mensagem" placeholder="Insira sua mensagem" autocomplete="off" required></textarea>
+                        <button name="enviar" onclick="emDesenvolvimento(event)">Enviar</button>
+                    </form>
+                </div>
+                <div class="Caixa-Direita">
+                    <h3>Entre em contacto por outros meios:</h3>
+                    <table>
+                        <tr>
+                            <td><a target=" _blank" href="https://discord.gg/Uz3uE32b99"><i class="fa-brands fa-discord"></i> Discord:</a></td>
+                            <td><a target=" _blank" href="https://discord.gg/Uz3uE32b99">https://discord.gg/Uz3uE32b99</a></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-brands fa-instagram"></i> Instagram</td>
+                            <td>@CyberShield</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+</body>
+    <footer>
+        <!--<div class="col-1">
+            <h3>Links Uteis</h3>
+            <a href="index.php?pagina=Contactos">Contactos <i class="fa-solid fa-phone"></i></a>
+        </div>-->
+        <div class="col-2">
+            <h3>NewsLetter</h3>
+            <form method="POST" action="" >
+                  <br>
+                  <label><input type="checkbox" name="TermosECondicoes" required value="">
+                  Li e aceitos os <a class="TermosECondicoes" href="index.php?pagina=TermosECondicoes">termos e condições</a>, bem como o tratamento dos dados pessoais.</label>
+                  <br>
+                  <button type="submit" name="Subscrever">
+                    Subscrever
+                  </button>
+            </form>
+        </div>
+        <div class="col-3">
+            <a href="index.php?pagina=Contactos"><h3>Contactos</h3></a>
+            <div class="Social-Icons">
+            <a href="Contactos.html"><i class="fa-brands fa-discord"></i>Discord</a>
+              <br>
+              <a href="index.php?pagina=Contactos"><i class="fa-solid fa-envelope"></i>Gmail</a>
+              <br>
+            </div>
+        </div>
+    </footer>
+    <script>
+const hoje = new Date();
+
+// formato português (DD/MM/AAAA)
+const dataFormatada = hoje.toLocaleDateString('pt-PT');
+
+document.getElementById("dataAtual").value = dataFormatada;
+</script>
+    <script>
+function emDesenvolvimento(event) {
+  event.preventDefault(); // impede o link de navegar
+  alert("Em desenvolvimento");
+}
+</script>
+</html>

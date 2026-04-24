@@ -1,0 +1,188 @@
+<html>
+    <link rel="stylesheet" href="TopNav_Visitante.css">
+    <link rel="stylesheet" href="Home_Visitante.css">
+<link rel="stylesheet" href="Padrao/Footer.css">
+<header class="TopNav">
+    <nav>
+      <ul class="Nav_Link">
+        <li>
+          <a href="/ProjetoFinal/index.html">Home <i class="fa-solid fa-house"></i></a>
+        </li>
+        <li class="dropdown">
+          <a>Produtos <i class="fa-sharp fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content">
+            <div class="hardware-dropdown">
+              <a href="">Hardware<i class="fa-brands fa-usb"></i></a>
+              <div class="hardware-dropdown-content">
+                  <a href="/ProjetoFinal/Produtos/RubberDucky.html">Rubber Ducky</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="/ProjetoFinal/Padrao/Contacto.html">Contactos <i class="fa-solid fa-phone fa-sm"></i></a></li>
+      </ul>
+    </nav>
+    <img class="logo" src="/ProjetoFinal/Imagens/Logos/Designer (1).png" alt="Logo" >
+    <a href="Padrao/PagDeError401.html" style="border-right:1px solid black" >
+      <!--<button class="FavIcon">
+      <i class="fa-solid fa-heart"><span class="Heart">0</span></i>
+      </button>-->
+    </a>
+    <a href="Padrao/PagDeError401.html">
+      <!--<button class="ShopIcon">
+        <i class="fa-solid fa-cart-shopping"><span class="Cart">0</span></i>
+      </button>-->
+    </a>
+    <a href="#" onclick="emDesenvolvimento(event)"><!-- Entrar na conta -->
+      <button class="UserIcon">
+        <i class="fa-solid fa-user"></i><span class="User">Login</span>
+      </button>
+    </a>
+    <a href="#" onclick="emDesenvolvimento(event)"><!-- Criar Conta -->
+      <button class="UserIcon">
+        <i class="fa-solid fa-user-pen"></i><span class="User">Registo</span>
+      </button>
+    </a>
+  </header>
+
+<body>
+<main>
+    <div class="BannerFundo" >
+    <img src="/ProjetoFinal/Imagens/Logos/LogoCyber3.jpeg" class="Banner" >
+    </div>
+    <table class="TabGeralV" >
+    <tr>
+        <td class="TituloV">
+        <!--<i>Mais Vendidos<div class="astV"></div></i>-->
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table class="ProdutosV">
+            <tr><td style="padding-top: 50px;" colspan="4"></td></tr>
+            <tr><!-- Imagem -->
+
+                <td>
+                <div class="ContainerProdutosV">
+                  <div class="ProdutosV">
+                    <img src="Imagens/Produtos/RubberDucky.png">
+                  </div>
+                </td>
+
+            </tr>
+            <tr><!-- Nome -->
+                <td>
+                <div class="ContainerProdutosV">
+                  <div class="ProdutosV">
+                   
+                      <div class="NomeProdV">RubberDucky<div class="astV"></div></div>
+                    
+                  </div>
+                </td>
+               
+            </tr>
+            <tr><!-- Descrição -->
+                <td>
+                <div class="ContainerProdutosV">
+                  <div class="ProdutosV">
+                  <div class="DescProdV">Um pequeno dispositivo de bolso capaz de causar grandes estragos a computadores com o objetivo de simular um teclado</div>
+                  </div>
+                </td>
+
+            </tr>
+            <tr><!-- Preço -->
+                <td>
+                <div class="ContainerProdutosV">
+                  <div class="ProdutosV">
+                  <div class="PrecoProdV"><i>170 €</i></div>
+                  </div>
+                </td>
+            </tr>
+            <tr><!-- botao -->
+                <td>
+                <a href="Produtos/RubberDucky.html">
+                  <button class="BotaoCompra">ver mais</button>
+                </a>
+              </td>
+               
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <td></td>
+      <!--<tr>
+        <td style="padding-top: 80px;">
+          <div class="button">
+            <a href="Login_Registo/Login.html">
+              <div class="button-wrapper">
+                <div class="text">+ produtos</div>
+                  <span class="icon">
+                    <i class="fa-solid fa-eye"  onclick="emDesenvolvimento(event) ">:D</i>
+                  </span>
+              </div>
+            </a>
+          </div>
+        </td>
+      </tr>-->
+      <tr>
+        <td colspan="4" style="padding-top: 80px;" >
+          <table class="MaisInfoEmpresa">
+            <tr>
+              <td rowspan="2" >
+                <img src="Imagens/Logos/LogoIcon.png">
+              </td>
+              <td class="NomeEmpresa" >
+                CyberShield <!--Protegendo cada byte com as nossas pinças de crustáceo-->
+              </td>
+            </tr>
+            <tr>
+              <td class="DescrEmpresa">
+                Somos uma empresa com o objetivo de vender equipamentos (fisicos,acessórios e <i>scripts</i>/<i>payloads</i>) para <i>pentesters</i>
+                e entusiastas por cibersegurança. A nossa empresa foi formada em 2026.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+  </table>
+</main>
+</body>
+<!--<script>
+  function AvisoLogin(){
+    alert("Para prevenir contas falsas, faça o login.")
+  }
+</script>-->
+    <footer>
+        <!--<div class="col-1">
+            <h3>Links Uteis</h3>
+            <a href="index.php?pagina=Contactos">Contactos <i class="fa-solid fa-phone"></i></a>
+        </div>-->
+        <div class="col-2">
+            <h3>NewsLetter</h3>
+            <form method="POST" action="" >
+                  <br>
+                  <label><input type="checkbox" name="TermosECondicoes" required value="">
+                  Li e aceitos os <a class="TermosECondicoes" href="index.php?pagina=TermosECondicoes">termos e condições</a>, bem como o tratamento dos dados pessoais.</label>
+                  <br>
+                  <button type="submit" name="Subscrever">
+                    Subscrever
+                  </button>
+            </form>
+        </div>
+        <div class="col-3">
+            <a href="index.php?pagina=Contactos"><h3>Contactos</h3></a>
+            <div class="Social-Icons">
+            <a href="Contactos.html"><i class="fa-brands fa-discord"></i>Discord</a>
+              <br>
+              <a href="index.php?pagina=Contactos"><i class="fa-solid fa-envelope"></i>Gmail</a>
+              <br>
+            </div>
+        </div>
+    </footer>
+    <script>
+function emDesenvolvimento(event) {
+  event.preventDefault(); // impede o link de navegar
+  alert("Em desenvolvimento");
+}
+</script>
+</html>
